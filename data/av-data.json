@@ -1,0 +1,20 @@
+{
+    "title": "Winter Audio Visualizer",
+    "audioFiles":
+    [
+        {"title": "White Winter Hymnal", "filename":"White Winter Hymnal.mp3"},
+        {"title": "Peanuts Theme", "filename":"Peanuts Theme.mp3"},
+        {"title": "Winter (Ancient)", "filename":"Winter (Ancient).mp3"},
+        {"title": "Wish", "filename":"Wish Background.mp3"},
+        {"title": "Carol of the Bells", "filename":"Carol of the Bells.mp3"}
+    ],
+    "initalParams":
+    {
+        "showStars": true,
+        "showCircles": true,
+        "showInvert": false,
+        "showEmboss": false,
+        "time": false,
+        "lineIntensity":5
+    }
+}

@@ -1,0 +1,164 @@
+body {
+  background: 	#5a5a97;
+  font-family: 'Crimson Text', tahoma, verdana, sans serif;
+  margin: 0;
+}
+
+main{
+  display: grid;
+  grid-template-areas: 
+  "title title" 
+  "canvas  controls";
+  grid-template-columns: auto 1fr;
+}
+
+canvas {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+  background: #fafafa;
+  grid-area: canvas;
+}
+
+h1{
+  font-size: x-large;
+}
+
+#controls{
+  margin: 1rem;
+  padding: 1rem;
+  grid-area: controls;
+  justify-self: left;
+  background: #eeeeee;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+  height: min-content;
+}
+  
+#volumeLabel{
+  margin-left: 1rem;
+}
+  
+section{
+  margin-bottom: 1rem;
+}
+
+#playButton{
+  font-size: 1.2rem;
+  width: 6rem;
+}
+  
+button,#track-select{
+  appearance: none;
+  width: auto;
+  font: inherit;
+  margin: 0.1em;
+  border: 0.15em solid #0f0f41;
+  border-radius: 0.15em;
+  color: #0f0f41;
+}
+
+button[data-playing="yes"]:after{
+  content: "Pause";
+}
+  
+button[data-playing="no"]:after{
+  content: "Play";
+}
+  
+#fsButton{
+  font-size: 1.2rem;
+  width: 8rem;
+}
+
+#track-select{
+  padding: 0.1em 0.2em ;
+  color: #0f0f41;
+}
+
+.checkbox{
+  margin: 0.1em;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  align-items: center;
+}
+input[type="checkbox"]{
+  appearance: none;
+  background-color: #eeeeee;
+  margin: 0;
+  font: inherit;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid #0f0f41;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: 	#313163;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="range"]{
+  appearance: none;
+  outline: none;
+  background: 	#0f0f41;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px; 
+  height: 15px;
+  background: #eeeeee; 
+  border: 0.1em solid;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 10px; 
+  height: 15px; 
+  background: #eeeeee; 
+  border: 0.1em solid;
+}
+@media (min-width: 1052px) {
+  canvas{
+    height: 800px;
+  }
+}
+
+@media (max-width: 1052px) {
+  canvas{
+    height: 600px;
+  }
+}
+
+@media (max-width: 850px) {
+  canvas{
+    height: 400px;
+  }
+}
+@media (max-width: 642px) {
+  main{
+    grid-template-areas:
+    "canvas"
+    "controls";
+    grid-template-columns: auto;
+  }
+  canvas{
+    height: 400px;
+  }
+}
+@media (max-width: 446px) {
+  canvas{
+    height: 300px;
+  }
+}
