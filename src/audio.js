@@ -105,8 +105,7 @@ const toggleLowshelf = () =>{
 export 
 { 
     audioCtx, setupWebaudio, playCurrentSound, pauseCurrentSound, 
-    loadSoundFile, setVolume, analyserNode, 
-    biquadFilter, toggleHighshelf , highshelf,
-    lowShelfBiquadFilter, toggleLowshelf, lowshelf
+    loadSoundFile, setVolume, analyserNode, toggleHighshelf ,
+    toggleLowshelf
 };
 // make sure that it's a Number rather than a String

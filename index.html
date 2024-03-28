@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title>Audio Visualizer</title>
   <link href="./styles/default-styles.css" type="text/css" rel="stylesheet" />
-  <script src="./src/loader.js" type="module"></script>
+  <!--<script src="./src/loader.js" type="module"></script>-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
@@ -31,7 +31,7 @@
       <span id="volume-label">???</span>
     </section>
     <section>
-      <p>Adjust intensity to affect the rainbow path in the sky</p>
+      <p>Adjust intensity to affect the northern lights in the sky</p>
       Path Intensity: <input type="range" id="path-slider" min="1" max="20" value="5" step="1">
       <span id="path-label">5</span>
     </section>
@@ -54,4 +54,5 @@
   <img id="background" src="./media/background.jpg" hidden="true">
 </main>
 </body>
+<script src="dist/bundle.js"></script>
 </html>
